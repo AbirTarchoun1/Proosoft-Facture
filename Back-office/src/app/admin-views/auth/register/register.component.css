@@ -1,0 +1,219 @@
+
+label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 40px;
+    -webkit-box-shadow: 0px 0px 23px -15px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 23px -15px rgba(0,0,0,1);
+    box-shadow: 0px 0px 23px -15px rgba(0,0,0,1);
+  }
+  
+
+  .form-group .has-error {
+    color: rgb(183, 5, 5);
+  }
+  
+  .form-group .btn {
+    color: white;
+    background-color: #446DCA;
+    font-size: 19px;
+    font-weight: 600;
+    text-align: left;
+    width: 180px;
+    padding: 10px 30px;
+    margin: 0 25px 0 0;
+    border-radius: 30px;
+    border: none;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+  }
+  
+  
+  .form-group .form-control:focus {
+    box-shadow: none;
+    border-color: #446DCA;
+  }
+  
+  
+  .form-group.form-control:focus {
+    box-shadow: none;
+    border-color: #446DCA;
+  }
+  
+  :host {
+    background-color: #eef1f7;
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .form-group.form-control::placeholder {
+    color: #222;
+    font-size: 15px;
+  }
+  
+  .form-group .input-icon {
+    color: #7b7b7b;
+    font-size: 23px;
+    position: absolute;
+    left: 310px;
+    top: 210px;
+  }
+  
+  /* validate form  */
+  .form-control.ng-touched.ng-invalid {
+    border: 1px solid rgb(183, 5, 5);
+    border-left: 5px solid rgb(183, 5, 5);
+  }
+  
+  /* validate form  */
+  .form-control.ng-touched.ng-valid {
+    border: 1px solid #446DCA;
+    border-left: 5px solid #446DCA;
+  }
+  
+  .form-control.ng-valid {
+    border: 1px solid #446DCA;
+    border-left: 5px solid #446DCA;
+  }
+  
+  /* alert msg d erreur */
+  
+  div.msg {
+    margin-top: 15px;
+    color: rgb(183, 5, 5);
+  }
+  
+  
+  /* validate form  */
+  input.ng-invalid {
+    border-left: 5px solid rgb(183, 5, 5);
+  }
+
+  .auth-wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100vh;
+    width: 390px;
+    padding: 15px;
+    z-index: 5;
+  }
+  
+  
+  
+  .auth-wrapper .auth-content {
+    position: relative;
+    z-index: 5;
+  }
+  
+
+  
+  .auth-wrapper .auth-bg .r {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .auth-wrapper {
+      max-width: 360px;
+    }
+  }
+  
+  @media only screen and (max-width: 575px) {
+    .auth-wrapper .card .card-body {
+      padding: 30px 15px;
+    }
+  }
+  
+  
+  .auth-wrapper .auth-bg .r.s {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .auth-wrapper .auth-bg .r.s:nth-child(2) {
+    top: 150px;
+    right: -150px;
+    background: #04a9f5;
+  }
+  
+  .auth-wrapper .auth-bg .r.s:nth-child(3) {
+    left: -150px;
+    bottom: 150px;
+    background: #3e45d9;
+  }
+  
+  .auth-wrapper .auth-bg .r:nth-child(odd) {
+    -webkit-animation: floating 7s infinite;
+    animation: floating 7s infinite;
+  }
+  
+  .auth-wrapper .auth-bg .r:nth-child(even) {
+    -webkit-animation: floating 9s infinite;
+    animation: floating 9s infinite;
+  }
+  
+  
+  
+  /* image varient start */
+  @-webkit-keyframes floating {
+    from {
+      -webkit-transform: rotate(0deg) translate(-10px) rotate(0deg);
+      transform: rotate(0deg) translate(-10px) rotate(0deg);
+    }
+  
+    to {
+      -webkit-transform: rotate(360deg) translate(-10px) rotate(-360deg);
+      transform: rotate(360deg) translate(-10px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes floating {
+    from {
+      -webkit-transform: rotate(0deg) translate(-10px) rotate(0deg);
+      transform: rotate(0deg) translate(-10px) rotate(0deg);
+    }
+  
+    to {
+      -webkit-transform: rotate(360deg) translate(-10px) rotate(-360deg);
+      transform: rotate(360deg) translate(-10px) rotate(-360deg);
+    }
+  }
+
+.logo_container img
+{
+	margin-top:8px;
+    margin-left:8px;
+    margin-right:8px;
+    margin-bottom:8px;
+	width:55px;
+	text-align:center;
+	height:55px;
+}
+

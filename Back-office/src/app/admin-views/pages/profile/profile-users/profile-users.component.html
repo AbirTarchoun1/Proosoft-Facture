@@ -1,0 +1,75 @@
+<br><br><br>
+<div class="container">
+    <div class="card m-b-30">
+        <div class="card-body">
+            <h5> Change Info</h5>
+            <form class="example-form" [formGroup]="user"><br><br>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <label> Username  </label>
+                        <input type="text" formControlName="username" placeholder="title" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6"><br>
+                        <label> Email </label><br>
+                        <input type="email" formControlName="email" placeholder="title" class="form-control ">
+                    </div>
+                </div>
+                <!--- <div class="row">
+               <div class="card-body media align-items-center"><br>
+                    <div class="media-body ml-4">
+                      <label class="btn btn-outline-primary">
+                        Upload new photo
+                        <input type="file" class="account-settings-fileinput">
+                      </label> &nbsp;
+                      <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+                    </div>
+                  </div>
+                  </div>-->
+            </form><br><br>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">&nbsp;&nbsp;
+                    <button mat-raised-button color="primary" style="width: 85px;" (click)="save()"><mat-icon>save
+                        </mat-icon> Save</button> &nbsp;&nbsp;
+                    <button mat-raised-button>Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div><br><br>
+    <div class="container">
+        <div class="card m-b-30">
+            <div class="card-body">
+                <form class="example-form">
+                        <h5> Change Password </h5>
+                        <form class="example-form"><br>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <input type="password" class="form-control" placeholder="Current password">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <input type="password" class="form-control" placeholder="New password">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <input type="password" class="form-control" placeholder="Repeat new password">
+                                </div>
+                            </div>
+                        </form><br><br>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">&nbsp;&nbsp;
+                                <button mat-raised-button color="primary" style="width: 85px;"><mat-icon>save
+                                    </mat-icon> Save</button> &nbsp;&nbsp;
+                                <button mat-raised-button>Cancel</button>
+                            </div>
+                        </div>
+                        <ng-template #loggedOut>
+                            Please login.
+                        </ng-template>

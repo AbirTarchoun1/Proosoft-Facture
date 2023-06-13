@@ -1,0 +1,131 @@
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.mat-table {
+    width: 100%;
+    max-width: 60%;
+    margin-bottom: 1rem;
+    display: table;
+    border-collapse: collapse;
+    margin: 0px;
+}
+
+.mat-row,
+.mat-header-row {
+    display: table-row;
+}
+
+.mat-cell,
+.mat-header-cell {
+    word-wrap: initial;
+    display: table-cell;
+    padding: 0px 40px;
+    line-break: unset;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.mat-footer-row .mat-footer-cell {
+    justify-content: center;
+    font-style: italic;
+}
+
+
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+form.normal-form {
+    margin: 10px;
+}
+
+.controles-container {
+    width: 100%;
+    padding: 5%;
+}
+
+.controles-container>* {
+    width: 100%;
+
+}
+
+.add-bottom-padding {
+    padding-bottom: 10px;
+}
+
+mat-radio-group mat-radio-button {
+    margin-left: 4px;
+}
+
+.button-row button {
+    margin: 5px;
+}
+
+.fill-remaining-space {
+    flex: 2 2 auto;
+}
+
+.vap-icon {
+    padding: 0 10px;
+}
+
+.mat-elevation-z5 {
+    position: relative;
+    z-index: 2;
+}
+
+.full-width {
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .card {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+
+
+/**
+Serach
+*/
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ 
+  }
+  
+  .search-field {
+    flex: 1;
+    margin-right: 15px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .search-container {
+      flex-direction: column;
+    }
+    
+    .search-field {
+      margin-right: 2;
+      margin-bottom: 10px;
+    }
+  }

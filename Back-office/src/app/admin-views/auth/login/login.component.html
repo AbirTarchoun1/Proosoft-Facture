@@ -1,0 +1,53 @@
+<div class="auth-wrapper">
+  <div class="auth-content">
+    <div class="card" align="center">
+      <div class="logo_container" align="center">
+        <img src="" />
+      </div>
+      <span class="col-md-12" [ngStyle]="{'font-size':'20px'}"> besh yetnadel</span><br><br>
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+          <div class="form-group">
+            <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required
+              placeholder="username" #username="ngModel" />
+            <mat-error *ngIf="!(f.submitted ) && username.errors && username.invalid && username.touched">
+              Username is required
+            </mat-error>
+            <mat-error *ngIf="(f.submitted )&& username.errors && username.invalid">
+              Username is required
+            </mat-error>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <input type="password" class="form-control" [type]="fieldTextType ? 'text' : 'password'" name="password"
+                [(ngModel)]="form.password" required minlength="6" placeholder="password" #password="ngModel" />
+              <span class="input-group-text">
+                <i class="fa" [ngClass]="{
+                'fa-eye-slash': !fieldTextType,
+                'fa-eye': fieldTextType }" (click)="toggleFieldTextType()"></i>
+              </span>
+            </div>
+            <mat-error *ngIf=" !(f.submitted) && password.errors && password.touched && password.invalid && password.errors.required">
+              Password is required </mat-error>
+            <mat-error  *ngIf=" (f.submitted) && password.errors && password.invalid">
+              Password is required 
+            </mat-error>
+            <mat-error
+              *ngIf=" !(f.submitted) && password.errors && password.invalid && password.touched && password.errors.minlength">
+               Password must be at least 6 characters
+            </mat-error>
+             <small class="flexbox">
+              <div></div><a style="text-decoration: none;" routerLink="/auth/resetpassword">
+                <p class="text-muted mb-3"> forgot password?</p>
+              </a>
+            </small>
+          </div>
+        <div class="form-group">
+          <button class="btn btn-primary">Login</button>
+        </div>
+        <div class="flexbox">
+          <p class="text-muted mb-3"> Don't have an account ?  <a style="text-decoration: none;"
+            [routerLink]="['/auth/register']">Signup </a></p>
+        </div>
+        <br>
+      </form>
+    </div>

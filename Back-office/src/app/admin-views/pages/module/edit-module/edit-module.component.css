@@ -1,0 +1,106 @@
+
+.fill-remaining-space{
+  flex: 1 1 auto;
+}
+form.normal-form{
+margin: 10px;
+}
+.controles-container{
+width: 100%;
+padding: 5%;
+}
+.controles-container > *{
+  width: 100%;
+ 
+  }
+  .add-bottom-padding{
+      padding-bottom:10px ;
+  } mat-radio-group  mat-radio-button{
+      margin-left: 4px;
+  }
+ .button-row button{
+      margin: 5px;
+  }
+
+  .fill-remaining-space {
+    flex: 2 2 auto;
+  }
+
+  .vap-icon {
+    padding: 0 10px;
+  }
+
+  .mat-elevation-z5 {
+    position: relative;
+    z-index: 2;
+    }
+
+
+.full-width{
+  margin-top: 20px;
+  width: 100%;
+  
+}
+
+
+/* Style for the button */
+.button-products {
+  background-color: #007bff; /* Set the background color */
+  color: #fff; /* Set the text color */
+  border: none; /* Remove the border */
+  padding: 5px 10px; /* Add some padding */
+  border-radius: 4px; /* Add some border radius */
+  cursor: pointer; /* Change the cursor on hover */
+}
+
+/* Style for the scrollable container */
+.scrollable-container {
+  max-height: 200px; /* Set the maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-top: 10px; /* Add some margin */
+  padding: 10px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a border */
+  border-radius: 4px; /* Add some border radius */
+}
+.scrollable {
+  overflow-y: auto;
+  max-height: 100px; /* set the maximum height to make the list scrollable */
+  scrollbar-width: thin; /* set the width of the scrollbar */
+  scrollbar-color: #aaa #fff; /* set the color of the scrollbar */
+}
+
+/* style the scrollbar thumb and track */
+.scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 5px;
+}
+.scrollable::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) { /* adjust the styles for screens smaller than 768px */
+  .mat-dialog-container {
+    max-width: 90vw; /* set the maximum width to 90% of the viewport width */
+    margin: 0 5vw; /* add some margin to the sides */
+  }
+}
+.container {
+  max-height: 70vh; /* Set the maximum height of the container */
+  overflow-y: auto; /* Add a vertical scrollbar when the content overflows */
+}
+
+@media (max-width: 767px) { /* Apply the following styles for screens smaller than 768px */
+  .container {
+    max-height: calc(100vh - 200px); /* Set the maximum height of the container to 100% of the viewport height minus the height of the toolbar and the button row */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) { /* Apply the following styles for screens between 768px and 1023px */
+  .container {
+    max-height: calc(100vh - 300px); /* Set the maximum height of the container to 100% of the viewport height minus the height of the toolbar and the button row */
+  }
+}

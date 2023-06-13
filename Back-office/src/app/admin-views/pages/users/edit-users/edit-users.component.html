@@ -1,0 +1,34 @@
+<mat-toolbar>
+  <span> Update Account </span>
+  <span class="fill-remaining-space"></span>
+  <button  class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1">
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-toolbar><br><br>
+<div class="container">
+  <div class="col-md-12">
+    <form name="form" (submit)="onSubmit()" [formGroup]="userService.form">
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label> Username </mat-label>
+        <input matInput type="text" name="username" formControlName="username" required
+          placeholder="username" minlength="3" maxlength="20" />
+   </mat-form-field>
+   <mat-form-field appearance="outline">
+    <mat-label> Email</mat-label>
+        <input matInput type="email"  name="email" formControlName="email" required email
+          placeholder="email" />
+   </mat-form-field>
+   </div> 
+   <div class="button-row">
+    <button mat-raised-button mat-dialog-close color="primary" type="submit">
+        <mat-icon>save</mat-icon> Save
+    </button>
+    <button mat-raised-button mat-dialog-close>
+        <mat-icon>close</mat-icon>Cancel
+    </button>
+    <button mat-raised-button (click)="onClear()">Clear</button>
+    </div>
+    </form>
+  </div>
+</div>

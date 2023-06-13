@@ -1,0 +1,43 @@
+<br><br><br>
+<div class="filter-left">
+  <button mat-fab color="primary" (click)="onCreateproduct()" class="add-button">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+
+<br><br>
+<div class="row">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let product of filteredProducts">
+    <div class="card product-card" [class.locked]="!product.productStatus">
+      <div class="card-img-top-wrapper">
+        <img class="card-img-top" src="{{PathImage + product.fileName}}" alt="{{product.productName}}">
+      </div>
+      
+      <div class="badge badge-warning" *ngIf="isNewlyAddedProduct(product.productId)">New</div>
+      <div class="card-body">
+        <h5 class="card-title">{{product.productName}}</h5>
+        <p class="card-text">
+          <span class="nav-label"><b>Version</b> {{product.productVersion }}</span><br>
+          <span class="nav-label"><b>Code Product</b> {{product.codProd}}</span>
+        </p>
+      
+        <div class="card-actions">
+          <button mat-icon-button class="edit-button"
+            (click)="onEditproduct(product)"><mat-icon>edit_outline</mat-icon></button>
+          <button mat-icon-button class="delete-button"><mat-icon color="warn"
+              (click)="onDeleteProduct(product.productId)">close</mat-icon></button>
+          <div class="lock-icon"
+            [ngClass]="{'unlock-icon': product.productStatus, 'unlock-icon-red': !product.productStatus}">
+            <mat-icon>{{ product.productStatus ? 'lock_open' : 'lock_outline' }}</mat-icon>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+     

@@ -1,0 +1,78 @@
+<div class="auth-wrapper">
+    <div class="auth-content">
+      <div class="container ">
+         <div class="card" align="center">
+            <div class="logo_container" align="center">
+                <img src=""/>
+            </div>
+            <span  class="col-md-12" [ngStyle]="{'font-size':'20px'}">Ttt</span><br><br>
+            <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+              <div class="form-group">
+                <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required
+                  placeholder="username"  #username="ngModel" />
+                <mat-error *ngIf="(!f.submitted) && username.errors && username.invalid  && username.touched ">
+                  Username is required
+                </mat-error>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" [(ngModel)]="form.email" required email
+                  placeholder="email" #email="ngModel" />
+                <mat-error class="msg" *ngIf="email.errors && (!f.submitted)  && email.invalid  && email.touched">
+               Email must be a valid email address
+                </mat-error>
+              </div>
+              <div class="form-group">
+                  <div class="input-group">
+                    <input type="password" class="form-control" [type]="fieldTextType ? 'text' : 'password'" name="password"
+                      [(ngModel)]="form.password" required minlength="8" placeholder="password" #password="ngModel"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$"/>
+                    <span class="input-group-text">
+                      <i class="fa" [ngClass]="{
+                      'fa-eye-slash': !fieldTextType,
+                      'fa-eye': fieldTextType }" (click)="toggleFieldTextType()"></i>
+                    </span>
+                  </div>
+                  <mat-error *ngIf="password.errors && (!f.submitted) && password.invalid  && password.touched">
+                   Password must contain more than 8<br>
+                   characters,1 numeric, 1 upper case<br>
+                   letter,1 special character $@$!%*?&
+                  </mat-error>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="password"  [type]="fieldTextType2 ? 'text' : 'password'" class="form-control" placeholder="confirm password" name="confirmPassword"
+                    [(ngModel)]="form.confirmPassword" required
+                    #confirmPassword="ngModel" />
+                    <span class="input-group-text">
+                      <i class="fa" [ngClass]="{
+                      'fa-eye-slash': !fieldTextType,
+                      'fa-eye': fieldTextType }" (click)="toggleFieldTextType2()"></i>
+                    </span>
+                 </div>
+                  <mat-error
+                    *ngIf="(!f.submitted) &&  confirmPassword.errors && confirmPassword.invalid  &&  confirmPassword.touched">
+                    Confirm Password is required
+                  </mat-error>
+                </div>
+               
+                <div class="form-group">
+                  <button class="btn btn-primary btn-block"[disabled]="!f.form.valid" ><span *ngIf="loading" class="spinner-border spinner-border-sm"></span>Sign Up</button>
+                </div>
+                <div class="flexbox mb-1"> <p class="text-muted"> Already have an account?<a style="text-decoration: none;" routerLink="/auth"> 
+                      Signin</a></p>
+                </div>
+               <mat-error *ngIf="f.submitted && isSignUpFailed" >
+                  Signup failed ! <br /> {{ message }}
+                </mat-error>
+            </form>
+         <div class="alert alert-success" *ngIf="isSuccessful">
+                Successfully registered !
+                <br><br>
+            </div>
+            
+         <div *ngIf="isSuccessful">
+          <div class="flexbox">
+            <p class="text-muted"></p><a style="text-decoration: none;" [routerLink]="['/auth']"  > Back to Signin</a>
+          </div>
+        </div>
+  
+      </div>

@@ -1,0 +1,35 @@
+<mat-toolbar>
+    <span>{{ productService.form.controls['productId'].value ? 'Update Product' : 'Add Product' }}</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()"
+      tabIndex="-1"><mat-icon>clear</mat-icon></button>
+  </mat-toolbar>
+  <br><br>
+      <form [formGroup]="productService.form" class="normal-form" (submit)="onSubmit()" class="normal-form">
+        <mat-form-field appearance="outline">
+          <mat-label> Product Name * </mat-label>
+          <input matInput formControlName="productName" [readonly]="productService.form.controls['productId'].value">
+         
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="margin-left: 3px;">
+          <mat-label> Product Version * </mat-label>
+          <input matInput formControlName="productVersion">
+        </mat-form-field>
+        <div class="form-group">
+          <label> Description * </label>
+          <ckeditor style=" margin-right: 30px;" formControlName="description" class="w-10 col-12" [config]='config'>
+          </ckeditor>
+        </div>
+        <div style=" margin-right: 30px;">
+          <mat-checkbox  color="primary" formControlName="productStatus" >Enable Product</mat-checkbox>
+        </div><br>
+        <div class="form-group">
+          <input type="file" color="primary" (change)="onFileSelected($event)"
+            [type]="productService.form.controls['productId'].value? 'hidden' : 'file'">
+        </div><br>
+          <button mat-raised-button color="primary" [disabled]="productService.form.invalid" class="float-right"
+            type="submit"><mat-icon>save</mat-icon> Save
+          </button>&nbsp;
+          <button mat-raised-button mat-dialog-close> <mat-icon>close</mat-icon>Cancel</button>&nbsp;
+          <!--<button mat-raised-button (click)="onClear()">Clear</button><br>-->
+      </form>

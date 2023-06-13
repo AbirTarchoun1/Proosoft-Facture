@@ -1,0 +1,77 @@
+<mat-toolbar>
+    <span>Add Account</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1">
+        <mat-icon>clear</mat-icon>
+    </button>
+</mat-toolbar><br><br>
+<div class="container ">
+    <div class="col-md-12">
+        <form name="form" (submit)="onSubmit()" [formGroup]="userService.form">
+            <div class="row">
+                <mat-form-field appearance="outline">
+                    <mat-label> Username </mat-label>
+                    <input matInput name="username" formControlName="username" required placeholder="username" />
+                    <mat-error
+                        *ngIf="(userService.form.controls['username'].touched || submitted ) && userService.form.controls['username'].errors?.required">
+                        Username is required.
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label> Email </mat-label>
+                    <input input matInput type="email" name="email" formControlName="email" required
+                        placeholder="email" />
+                    <mat-error
+                        *ngIf="(userService.form.controls['email'].touched || submitted ) && userService.form.controls['email'].errors?.required">
+                       Email is required.
+                    </mat-error>
+                    <mat-error *ngIf="(userService.form.controls['email'].errors?.email  || submitted)">
+                        Enter a valid adress.
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label> Password</mat-label>
+                    <input matInput [type]="fieldTextType ? 'text' : 'password'" name="password"
+                        formControlName="password" required minlength="8" placeholder="password"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$" />
+                    <mat-icon matSuffix> <i class="fa" [ngClass]="{
+                        'fa-eye-slash': !fieldTextType,
+                        'fa-eye': fieldTextType }" (click)="toggleFieldTextType()"></i></mat-icon>
+                    <mat-error
+                        *ngIf="(userService.form.controls['password'].touched || submitted ) && userService.form.controls['password'].errors?.required">
+                        Password must contain 8 characters,1 numeric, 1 upper case letter,1 special
+                        character$@$!%*?&.
+                    </mat-error>
+                    <mat-error *ngIf="(userService.form.controls['password'].errors?.pattern  || submitted)">
+                        Password must 8 characters,1 numeric,1 upper case letter,1 special
+                        character$@$!%*?&.
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label> Confirm Password</mat-label>
+                    <input matInput [type]="fieldTextType2 ? 'text' : 'password'" name="confirmPassword"
+                        formControlName="confirmPassword" required minlength="8" placeholder="Confirm Password"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$" />
+                    <mat-icon matSuffix><i class="fa" [ngClass]="{
+                'fa-eye-slash': !fieldTextType2,
+                'fa-eye': fieldTextType2 }" (click)="toggleFieldTextType2()"></i> </mat-icon>
+                <mat-error *ngIf="userService.form.controls['confirmPassword'].touched && userService.form.controls['confirmPassword'].errors?.required ">
+                    Confirm Password is Required
+                </mat-error>
+                <mat-error *ngIf="userService.form.controls['confirmPassword'].value && userService.form.controls['password'].value !== userService.form.controls['confirmPassword'].value">
+                    Confirm Password did not match.
+                </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="button-row">
+                <button mat-raised-button  color="primary" type="submit" [disabled]="userService.form.invalid">
+                    <mat-icon>save</mat-icon> Save
+                </button>
+                <button mat-raised-button mat-dialog-close>
+                    <mat-icon>close</mat-icon>Cancel
+                </button>
+                <button mat-raised-button (click)="onClear()">Clear</button>
+            </div>
+        </form>
+    </div>
+</div>

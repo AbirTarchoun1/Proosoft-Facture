@@ -1,0 +1,37 @@
+
+  .fill-remaining-space{
+      flex: 1 1 auto;
+  }
+
+     .button-row button{
+          margin: 5px;
+      }
+
+      .fill-remaining-space {
+        flex: 2 2 auto;
+      }
+    
+      .vap-icon {
+        padding: 0 10px;
+      }
+    
+      .mat-elevation-z5 {
+        position: relative;
+        z-index: 2;
+        }
+
+  .full-width{
+      margin-top: 20px;
+      width: 100%;
+      
+  }
+
+
+  .mat-error {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mat-error {
+    white-space: nowrap;
+  }

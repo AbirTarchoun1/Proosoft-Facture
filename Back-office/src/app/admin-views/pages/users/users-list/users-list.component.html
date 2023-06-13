@@ -1,0 +1,78 @@
+<br><br>
+
+<br><br>
+<div>
+    <button  class="float-right" mat-fab color="gray" (click)="onCreate()">
+        <mat-icon >add</mat-icon>
+    </button>
+</div>
+<br><br>
+<div class="card" style="width:100%;"><br>
+    <div class="container">
+        <br>
+        <div class="table-responsive table-border">
+            <ng-container *ngIf="!nodata; else noDataTemplate">
+            <table mat-table #table [dataSource]="datasource" matSort>
+                <ng-container matColumnDef="username">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Username </mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.username}} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="email">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+                    <mat-cell *matCellDef="let element"><a style="text-decoration: none !important; color: black;"
+                            href="mailto:{{element.email}}">{{element.email}}</a> </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="level">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Role </mat-header-cell>
+                    <mat-cell *matCellDef="let element">
+                        {{element.level}}
+                    </mat-cell>
+                </ng-container>
+             
+                <ng-container matColumnDef="createdDate">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Created At</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.createdDate | date:'dd/MM/yyyy HH:mm:ss'}} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="lastModificatedDate">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Last Modified At</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.lastModificatedDate | date:'dd/MM/yyyy HH:mm:ss'}} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="actions">
+                    <mat-header-cell *matHeaderCellDef>
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                        <button mat-icon-button (click)="onEdit(row)">
+                          <mat-icon>update</mat-icon>
+                        </button>&nbsp;&nbsp;
+                        <button mat-icon-button (click)="onDeleteUser(row.userId)">
+                            <mat-icon color="warn">delete_outline</mat-icon>
+                        </button>
+                       </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="loading">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        Loading data....
+                    </mat-footer-cell>
+                </ng-container>
+                <ng-container matColumnDef="nodata">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                            NO data....
+                    </mat-footer-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':datasource!=null}"></mat-footer-row>
+                <mat-footer-row *matFooterRowDef="['nodata']"
+                    [ngClass]="{'hide': !(datasource!=null && datasource.data.length==0)}"></mat-footer-row>
+            </table>
+            <br>
+            </ng-container>
+            <mat-paginator [pageSizeOptions]="[ 5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+            <ng-template #noDataTemplate>
+            <div class="mat-display-1">No data available</div>
+          </ng-template>
+
+        </div>
+    </div>
+    <br>
+</div>

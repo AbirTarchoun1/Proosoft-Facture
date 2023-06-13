@@ -1,0 +1,75 @@
+<br><br><br><br>
+<div class="search-div">
+  <button class="float-right" mat-fab color="primary" (click)="onCreate()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+<br><br>
+
+<div class="card" style="width:100%;"><br>
+  <div class="container">
+    <div class="table-responsive">
+      <table mat-table #table [dataSource]="datasource" matSort>
+        <ng-container matColumnDef="codMod">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Code Module </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.codMod}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="moduleName">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Module Name</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.moduleName}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="modulePackage">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Module Package </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.modulePackage}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="moduleStatut">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <span *ngIf="element.moduleStatut; else inactiveIcon">
+              <mat-icon [ngStyle]="{'color':'green'}">check_circle</mat-icon>
+            </span>
+            <ng-template #inactiveIcon>
+              <mat-icon color="warn">cancel</mat-icon>
+            </ng-template>
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="productNames">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Products</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{element.productNames}}
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="lastModificatedDate">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Last Modified At</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.lastModificatedDate | date:'dd/MM/yyyy HH:mm:ss a' }}
+          </mat-cell>
+        </ng-container>
+        <!-- Action Column -->
+        <ng-container matColumnDef="actions"> 
+          <mat-header-cell *matHeaderCellDef>
+          </mat-header-cell>
+          <mat-cell *matCellDef="let row">
+              <button mat-icon-button (click)="onEdit(row)">
+                  <mat-icon>update</mat-icon>
+              </button>&nbsp;&nbsp;
+              <button mat-icon-button >
+                  <mat-icon color="warn">delete_outline</mat-icon>
+              </button>
+          </mat-cell>
+      </ng-container>
+        <ng-container matColumnDef="nodata">
+          <mat-footer-cell *matFooterCellDef colspan="6">
+            NO data....
+          </mat-footer-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        <mat-footer-row *matFooterRowDef="['nodata']"
+          [ngClass]="{'hide': !(datasource!=null && datasource.data.length==0)}"></mat-footer-row>
+      </table>
+      <br>
+      <mat-paginator [pageSizeOptions]="[ 5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+</div>
+<br>

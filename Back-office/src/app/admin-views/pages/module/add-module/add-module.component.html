@@ -1,0 +1,49 @@
+<mat-toolbar>
+  <span class="dialog-title">Add Module</span>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onClose()"
+    tabIndex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<div class="container"><br>
+  <form name="form" (submit)="onSubmit()" [formGroup]="moduleService.form">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label> Module Name </mat-label>
+        <input matInput name="moduleName" formControlName="moduleName" required placeholder="Module Name" />
+          <mat-error *ngIf="moduleService.form.controls['moduleName'].errors?.required">this field is mandatory.
+          </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label> Module Package </mat-label>
+        <input matInput formControlName="modulePackage" placeholder="Module Package">
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-label for="productIds"> Choose Product *</mat-label><br><br>
+      <div class="scrollable">
+        <div *ngFor="let product of productServices">
+          <div class="form-check formControl">
+            <input type="checkbox" class="form-check-input" [value]="product.productId"
+              (change)="onProductSelectionChange($event)">
+            <mat-label>{{ product.productName }}</mat-label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <textarea matInput formControlName="description" name="description" placeholder="Description"
+          type="text" maxlength="200"></textarea>
+      </mat-form-field>
+    </div>
+    <mat-checkbox formControlName="moduleStatut" color="primary"> Enable Module</mat-checkbox><br><br>
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit">
+        <mat-icon>save</mat-icon> Save
+      </button>
+      <button mat-raised-button mat-dialog-close>
+        <mat-icon>close</mat-icon>Cancel
+      </button>
+    </div>
+  </form>
+</div>

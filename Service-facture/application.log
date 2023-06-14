@@ -1,0 +1,263 @@
+2023-06-14 08:24:05,335 INFO  StartupInfoLogger:51 - [] Starting ServiceFactureApplicationTests using Java 17.0.7 with PID 4680 (started by TPDEV1 in C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture)
+2023-06-14 08:24:05,338 INFO  SpringApplication:633 - [] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 08:24:06,142 INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 08:24:06,168 INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2023-06-14 08:24:06,708 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 08:24:06,916 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-14 08:24:06,924 INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-06-14 08:24:07,274 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:24:07,485 INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 08:24:07,508 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-06-14 08:24:07,810 INFO  HikariPool:565 - [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c07add6
+2023-06-14 08:24:07,813 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-06-14 08:24:07,891 INFO  DialectFactoryImpl:93 - [] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@5203c80f
+2023-06-14 08:24:08,136 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:24:08,463 INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 08:24:08,473 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:24:08,721 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 08:24:09,300 INFO  StartupInfoLogger:57 - [] Started ServiceFactureApplicationTests in 4.523 seconds (process running for 6.18)
+2023-06-14 08:24:10,381 INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:24:10,383 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-06-14 08:24:10,392 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-06-14 08:25:38,289 INFO  StartupInfoLogger:51 - [] Starting ServiceFactureApplicationTests using Java 17.0.7 with PID 32440 (started by TPDEV1 in C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture)
+2023-06-14 08:25:38,293 INFO  SpringApplication:633 - [] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 08:25:38,915 INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 08:25:38,948 INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2023-06-14 08:25:39,457 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 08:25:39,565 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-14 08:25:39,568 INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-06-14 08:25:39,805 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:25:39,950 INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 08:25:39,968 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-06-14 08:25:40,225 INFO  HikariPool:565 - [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c07add6
+2023-06-14 08:25:40,228 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-06-14 08:25:40,268 INFO  DialectFactoryImpl:93 - [] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@5203c80f
+2023-06-14 08:25:40,400 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:25:40,697 INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 08:25:40,714 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:25:40,908 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 08:25:41,370 INFO  StartupInfoLogger:57 - [] Started ServiceFactureApplicationTests in 3.532 seconds (process running for 4.678)
+2023-06-14 08:25:42,234 INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:25:42,237 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-06-14 08:25:42,253 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-06-14 08:26:23,684 INFO  StartupInfoLogger:51 - [] Starting ServiceFactureApplicationTests using Java 17.0.7 with PID 29256 (started by TPDEV1 in C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture)
+2023-06-14 08:26:23,687 INFO  SpringApplication:633 - [] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 08:26:24,368 INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 08:26:24,396 INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2023-06-14 08:26:24,901 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 08:26:25,007 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-14 08:26:25,011 INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-06-14 08:26:25,218 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:26:25,386 INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 08:26:25,413 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-06-14 08:26:25,633 INFO  HikariPool:565 - [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@54489296
+2023-06-14 08:26:25,636 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-06-14 08:26:25,683 INFO  DialectFactoryImpl:93 - [] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@550c973e
+2023-06-14 08:26:25,826 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:26:26,119 INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 08:26:26,130 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:26:26,328 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 08:26:26,864 INFO  StartupInfoLogger:57 - [] Started ServiceFactureApplicationTests in 3.61 seconds (process running for 4.73)
+2023-06-14 08:26:27,676 INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:26:27,679 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-06-14 08:26:27,685 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-06-14 08:27:02,156 INFO  StartupInfoLogger:51 - [] Starting ServiceFactureApplicationTests using Java 17.0.7 with PID 28528 (started by TPDEV1 in C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture)
+2023-06-14 08:27:02,161 INFO  SpringApplication:633 - [] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 08:27:02,897 INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 08:27:02,927 INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2023-06-14 08:27:03,447 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 08:27:03,554 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-14 08:27:03,560 INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-06-14 08:27:03,786 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:27:03,941 INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 08:27:03,962 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-06-14 08:27:04,210 INFO  HikariPool:565 - [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4861cca9
+2023-06-14 08:27:04,213 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-06-14 08:27:04,262 INFO  DialectFactoryImpl:93 - [] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@3962ec84
+2023-06-14 08:27:04,439 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:27:04,802 INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 08:27:04,811 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:27:05,061 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 08:27:05,539 INFO  StartupInfoLogger:57 - [] Started ServiceFactureApplicationTests in 3.774 seconds (process running for 4.863)
+2023-06-14 08:27:06,335 INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:27:06,340 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-06-14 08:27:06,353 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-06-14 08:28:05,505 INFO  StartupInfoLogger:51 - [] Starting ServiceFactureApplicationTests using Java 17.0.7 with PID 26576 (started by TPDEV1 in C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture)
+2023-06-14 08:28:05,521 INFO  SpringApplication:633 - [] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 08:28:07,055 INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 08:28:07,087 INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+2023-06-14 08:28:07,681 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 08:28:07,866 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-14 08:28:07,871 INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-06-14 08:28:08,153 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:28:08,429 INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 08:28:08,461 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-06-14 08:28:08,781 INFO  HikariPool:565 - [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b17d8ab
+2023-06-14 08:28:08,784 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-06-14 08:28:08,872 INFO  DialectFactoryImpl:93 - [] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@7e94e331
+2023-06-14 08:28:09,096 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:28:09,573 INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 08:28:09,580 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:28:09,856 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 08:28:10,639 INFO  StartupInfoLogger:57 - [] Started ServiceFactureApplicationTests in 5.614 seconds (process running for 6.966)
+2023-06-14 08:28:11,680 INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:28:11,682 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-06-14 08:28:11,700 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-06-14 08:32:32,645 INFO  StartupInfoLogger:51 - [] Starting ServiceFactureApplication using Java 17.0.7 with PID 29692 (C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture\target\classes started by TPDEV1 in C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture)
+2023-06-14 08:32:32,650 INFO  SpringApplication:633 - [] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 08:32:33,141 INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 08:32:33,165 INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-06-14 08:32:33,569 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8084 (http)
+2023-06-14 08:32:33,577 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2023-06-14 08:32:33,578 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-14 08:32:33,671 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2023-06-14 08:32:33,671 INFO  ServletWebServerApplicationContext:291 - [] Root WebApplicationContext: initialization completed in 973 ms
+2023-06-14 08:32:33,833 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 08:32:33,873 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-14 08:32:33,876 INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-06-14 08:32:33,990 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:32:34,094 INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 08:32:34,107 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-06-14 08:32:34,298 INFO  HikariPool:565 - [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@11bfffb3
+2023-06-14 08:32:34,299 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-06-14 08:32:34,344 INFO  DialectFactoryImpl:93 - [] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@3957d88b
+2023-06-14 08:32:34,418 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:32:34,629 INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 08:32:34,635 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:32:34,673 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 08:32:35,033 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8084 (http) with context path ''
+2023-06-14 08:32:35,046 INFO  StartupInfoLogger:57 - [] Started ServiceFactureApplication in 2.744 seconds (process running for 3.397)
+2023-06-14 08:58:26,052 INFO  StartupInfoLogger:51 - [] Starting ServiceFactureApplication using Java 17.0.7 with PID 9764 (C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture\target\classes started by TPDEV1 in C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture)
+2023-06-14 08:58:26,058 INFO  SpringApplication:633 - [] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 08:58:26,691 INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 08:58:26,718 INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2023-06-14 08:58:27,242 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8084 (http)
+2023-06-14 08:58:27,260 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2023-06-14 08:58:27,260 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-14 08:58:27,389 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2023-06-14 08:58:27,390 INFO  ServletWebServerApplicationContext:291 - [] Root WebApplicationContext: initialization completed in 1270 ms
+2023-06-14 08:58:27,567 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 08:58:27,661 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-14 08:58:27,665 INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-06-14 08:58:27,855 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:58:28,035 INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 08:58:28,055 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-06-14 08:58:28,244 INFO  HikariPool:565 - [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51eb0e84
+2023-06-14 08:58:28,246 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-06-14 08:58:28,310 INFO  DialectFactoryImpl:93 - [] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@70f4f89e
+2023-06-14 08:58:28,431 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:58:28,726 INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 08:58:28,734 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:58:28,791 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 08:58:29,229 WARN  AbstractApplicationContext:616 - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-06-14 08:58:29,232 INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:58:29,235 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-06-14 08:58:29,241 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-06-14 08:58:29,244 INFO  DirectJDKLog:173 - [] Stopping service [Tomcat]
+2023-06-14 08:58:29,261 INFO  ConditionEvaluationReportLogger:82 - [] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-14 08:58:29,279 ERROR LoggingFailureAnalysisReporter:40 - [] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8084 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8084 or configure this application to listen on another port.
+
+2023-06-14 08:58:33,332 INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159 - [] Application shutdown requested.
+2023-06-14 08:58:33,409 INFO  DirectJDKLog:173 - [] Stopping service [Tomcat]
+2023-06-14 08:58:33,437 INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:58:33,445 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-06-14 08:58:33,459 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-06-14 08:58:36,310 INFO  StartupInfoLogger:51 - [] Starting ServiceFactureApplication using Java 17.0.7 with PID 10008 (C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture\target\classes started by TPDEV1 in C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture)
+2023-06-14 08:58:36,313 INFO  SpringApplication:633 - [] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 08:58:36,847 INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 08:58:36,871 INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2023-06-14 08:58:37,311 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8084 (http)
+2023-06-14 08:58:37,320 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2023-06-14 08:58:37,321 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-14 08:58:37,416 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2023-06-14 08:58:37,417 INFO  ServletWebServerApplicationContext:291 - [] Root WebApplicationContext: initialization completed in 1053 ms
+2023-06-14 08:58:37,588 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 08:58:37,638 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-14 08:58:37,641 INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-06-14 08:58:37,787 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:58:37,919 INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 08:58:37,936 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-06-14 08:58:38,265 INFO  HikariPool:565 - [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@42730828
+2023-06-14 08:58:38,267 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-06-14 08:58:38,314 INFO  DialectFactoryImpl:93 - [] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@56da96b3
+2023-06-14 08:58:38,404 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 08:58:38,635 INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 08:58:38,641 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 08:58:38,681 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 08:58:39,050 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8084 (http) with context path ''
+2023-06-14 08:58:39,063 INFO  StartupInfoLogger:57 - [] Started ServiceFactureApplication in 3.178 seconds (process running for 3.906)
+2023-06-14 09:03:50,625 INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159 - [] Application shutdown requested.
+2023-06-14 09:03:50,649 INFO  DirectJDKLog:173 - [] Stopping service [Tomcat]
+2023-06-14 09:03:50,661 INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 09:03:50,663 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-06-14 09:03:50,669 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-06-14 10:28:00,442 INFO  StartupInfoLogger:51 - [] Starting ServiceFactureApplication using Java 18.0.2 with PID 34808 (C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture\target\classes started by TPDEV1 in C:\Users\TPDEV1\Documents\workspace-spring-tool-suite-4-4.18.1.RELEASE\Service-facture)
+2023-06-14 10:28:00,448 INFO  SpringApplication:633 - [] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 10:28:01,670 INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 10:28:01,710 INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2023-06-14 10:28:02,828 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8084 (http)
+2023-06-14 10:28:02,850 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2023-06-14 10:28:02,851 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-14 10:28:03,012 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2023-06-14 10:28:03,012 INFO  ServletWebServerApplicationContext:291 - [] Root WebApplicationContext: initialization completed in 2458 ms
+2023-06-14 10:28:03,328 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 10:28:03,460 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-14 10:28:03,462 INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-06-14 10:28:03,693 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 10:28:03,893 INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 10:28:03,922 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-06-14 10:28:04,259 INFO  HikariPool:565 - [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5fb8dc01
+2023-06-14 10:28:04,262 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-06-14 10:28:04,336 INFO  DialectFactoryImpl:93 - [] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@3855d9b2
+2023-06-14 10:28:04,507 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 10:28:04,916 INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 10:28:04,925 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 10:28:05,002 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 10:28:05,723 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8084 (http) with context path ''
+2023-06-14 10:28:05,740 INFO  StartupInfoLogger:57 - [] Started ServiceFactureApplication in 6.338 seconds (process running for 9.351)
+2023-06-14 12:46:23,213 WARN  HikariPool$HouseKeeper:804 - [] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m47s46ms769µs400ns).
+2023-06-14 13:12:58,165 WARN  HikariPool$HouseKeeper:804 - [] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m34s877ms374µs800ns).
+2023-06-14 16:47:25,204 INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 16:47:25,465 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-06-14 16:47:25,555 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
+2023-06-14 16:55:57,201 INFO  StartupInfoLogger:51 - [] Starting ServiceFactureApplication using Java 18.0.2 with PID 25000 (C:\Users\TPDEV1\Desktop\Master\Service-facture\target\classes started by TPDEV1 in C:\Users\TPDEV1\Desktop\Master\Service-facture)
+2023-06-14 16:55:57,211 INFO  SpringApplication:633 - [] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 16:55:58,700 INFO  RepositoryConfigurationDelegate:138 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 16:55:58,740 INFO  RepositoryConfigurationDelegate:208 - [] Finished Spring Data repository scanning in 24 ms. Found 0 JPA repository interfaces.
+2023-06-14 16:55:59,782 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8084 (http)
+2023-06-14 16:55:59,797 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2023-06-14 16:55:59,797 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-14 16:55:59,966 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2023-06-14 16:55:59,968 INFO  ServletWebServerApplicationContext:291 - [] Root WebApplicationContext: initialization completed in 2623 ms
+2023-06-14 16:56:00,323 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 16:56:00,435 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-14 16:56:00,439 INFO  Environment:191 - [] HHH000406: Using bytecode reflection optimizer
+2023-06-14 16:56:00,682 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 16:56:00,881 INFO  SpringPersistenceUnitInfo:87 - [] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 16:56:00,933 INFO  HikariDataSource:110 - [] HikariPool-1 - Starting...
+2023-06-14 16:56:01,307 INFO  HikariPool:565 - [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@66020d69
+2023-06-14 16:56:01,311 INFO  HikariDataSource:123 - [] HikariPool-1 - Start completed.
+2023-06-14 16:56:01,390 INFO  DialectFactoryImpl:93 - [] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@6d31f106
+2023-06-14 16:56:01,562 INFO  BytecodeProviderInitiator:53 - [] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 16:56:02,038 INFO  JtaPlatformInitiator:51 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 16:56:02,048 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 16:56:02,146 WARN  JpaBaseConfiguration$JpaWebConfiguration:231 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 16:56:02,903 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8084 (http) with context path ''
+2023-06-14 16:56:02,915 INFO  StartupInfoLogger:57 - [] Started ServiceFactureApplication in 7.121 seconds (process running for 8.097)
+2023-06-14 16:56:07,101 INFO  AbstractEntityManagerFactoryBean:650 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 16:56:07,104 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2023-06-14 16:56:07,115 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.

@@ -12,11 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,7 +35,7 @@ public class FactureService implements IFacture {
         Facture savedFacture = factureRepository.save(facture);
 
         // Make an API call to retrieve user details from the User service
-        User user = restTemplate.getForObject("http://User-Service/api/users/{userId}", User.class, facture.getUser().getIduser());
+        User user = restTemplate.getForObject("http://User-Service/api/users/{userId}", User.class, facture.getUserId());
 
         return savedFacture;
     }
@@ -87,11 +83,22 @@ public class FactureService implements IFacture {
     }
 
     @Override
-    public Map<Integer, String[]> divide_table(String table, int idfacture) {
+    public Map<Integer, String[]> divide_table(String table) {
         String[] lines = table.split("\n");
         Map<String, String> extractedData = verifyData(table);
         Map<Integer, String[]> map = new HashMap<>();
-        int tableStartIndex = -1;
+
+
+
+        for(int i =1;i<lines.length;i++)
+        {
+
+            String[] words = lines[i].split("\\s+");
+            if(words.length >1)
+                map.put(i,words);
+        }
+
+       /* int tableStartIndex = -1;
 
         // Find the start index of the table
         for (int i = 0; i < lines.length; i++) {
@@ -110,10 +117,9 @@ public class FactureService implements IFacture {
                     map.put(i, words);
                 }
             }
-        }
+        }*/
 
         Facture facture = new Facture();
-        facture.setIdfacture((long) idfacture);
         facture.setDateFacture(extractedData.get("DateFacture"));
         facture.setClient(extractedData.get("CodeClient"));
         facture.setReference(extractedData.get("Reference"));
@@ -122,7 +128,7 @@ public class FactureService implements IFacture {
         facture.setTotal_TTC(extractedData.get("Total_TTC"));
         facture.setTitre(extractedData.get("Titre"));
 
-        for (String[] line : map.values()) {
+        /*for (String[] line : map.values()) {
             if (line.length > 0) {
                 String quantite = line[0].trim();
                 facture.setQuantite(quantite);
@@ -141,11 +147,45 @@ public class FactureService implements IFacture {
             if (line.length > 3) {
                 String prix_total_HT = line[3].trim();
                 facture.setPrix_total_HT(prix_total_HT);
+            }*/
+        for (String[] line : map.values()) {
+            if (line.length > 0) {
+                facture.setQuantite(line[0]);
+            } else {
+                facture.setQuantite("N/A"); // Set a default value or handle the case when the value is missing
             }
+
+            if (line.length > 1) {
+                facture.setDecription(line[1]);
+            } else {
+                facture.setDecription("N/A"); // Set a default value or handle the case when the value is missing
+            }
+
+            if (line.length > 2) {
+                facture.setPrix_unitaire_HT(line[2]);
+            } else {
+                facture.setPrix_unitaire_HT("N/A"); // Set a default value or handle the case when the value is missing
+            }
+
+            if (line.length > 3) {
+                facture.setPrix_total_HT(line[3]);
+            } else {
+                facture.setPrix_total_HT("N/A"); // Set a default value or handle the case when the value is missing
+            }
+        }// Verifying codeClient and assigning idUser
+            User user = userRepository.findByCodeClient(facture.getClient());
+
+            if (user != null && user.getCodeClient() != null && user.getCodeClient().equals(facture.getClient())) {
+                facture.setUserId(Math.toIntExact(user.getIduser()));
+            } else {
+                // Handle the case when codeClient does not match or user is not found
+                facture.setUserId(0); // Set a default value
+            }
+
+            factureRepository.save(facture);
+            return map;
         }
-        factureRepository.save(facture);
-        return map;
-    }
+
 
     public Map<String, String> verifyData(String extractedText) {
         String[] lines = extractedText.split("\n");

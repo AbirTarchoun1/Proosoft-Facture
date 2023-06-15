@@ -14,7 +14,7 @@ public interface IFacture {
 
     /*void removeFacture (int idFacture );*/
 
-    Map<Integer,String[]> divide_table(String table, int idfacture);
+    Map<Integer,String[]> divide_table(String table);
     Facture retrieveFacture(Long idFacture);
 
     List<Facture> retrieveAllFacture();

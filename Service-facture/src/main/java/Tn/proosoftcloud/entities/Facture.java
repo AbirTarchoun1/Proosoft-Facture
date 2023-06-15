@@ -24,10 +24,10 @@ public class Facture {
     private String Tva;
     private String DateFacture;
     private String Titre ;
-    @ManyToOne
-    private User user;
-
-    public Facture(Long idfacture, String decription, String quantite, String prix_unitaire_HT, String prix_total_HT, String total_HT, String total_TTC, String reference, String client, String tva, String dateFacture, String titre ,User user) {
+    /*@ManyToOne
+    private User user;*/
+    private int userId ;
+    public Facture(Long idfacture, String decription, String quantite, String prix_unitaire_HT, String prix_total_HT, String total_HT, String total_TTC, String reference, String client, String tva, String dateFacture, String titre ) {
         this.idfacture = idfacture;
         Decription = decription;
         Quantite = quantite;
@@ -40,7 +40,15 @@ public class Facture {
         Tva = tva;
         DateFacture = dateFacture;
         Titre =titre;
-        this.user = user;
+
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public Long getIdfacture() {
@@ -140,13 +148,13 @@ public class Facture {
         DateFacture = dateFacture;
     }
 
-    public User getUser() {
+   /* public User getUser() {
         return user;
-    }
+    }*/
 
-    public void setUser(User user) {
+   /* public void setUser(User user) {
         this.user = user;
-    }
+    }*/
 
     public Facture(){
         super();

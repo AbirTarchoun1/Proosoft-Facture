@@ -79,7 +79,7 @@ public class TableExtractionController {
                     // Create the response object
                     Map<String, String> responseBody = new HashMap<>();
                     responseBody.put("tables", tables);
-                     Map<Integer, String[]> map = facture.divide_table(tables, idfacture);
+                     Map<Integer, String[]> map = facture.divide_table(tables);
                     //testResult.addOrUpdateTestResult();)
                     return ResponseEntity.ok(map);
                 } catch (IOException e) {

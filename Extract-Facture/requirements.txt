@@ -1,6 +1,6 @@
 Django==3.2.10
 layoutparser==0.3.3
-pytesseract==0.3.8
+pytesseract==py0.3.8
 Pillow~=9.5.0
 tabula~=1.0.5
 torch~=2.0.1

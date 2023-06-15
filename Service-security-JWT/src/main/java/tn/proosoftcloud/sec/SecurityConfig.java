@@ -1,5 +1,5 @@
 package tn.proosoftcloud.sec;
-import tn.proosoftcloud.sec.entities.AppUser;
+import tn.proosoftcloud.sec.entities.User;
 import tn.proosoftcloud.sec.filters.JwtAuthentificationFilter;
 import tn.proosoftcloud.sec.filters.JwtAuthorizationFilter;
 import tn.proosoftcloud.sec.service.AccountService;
@@ -15,7 +15,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -34,13 +33,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(new UserDetailsService() {
             @Override
             public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-                AppUser appUser=accountService.loadUserByUsername(username);
+                User user =accountService.loadUserByUsername(username);
 
                 Collection<GrantedAuthority> authorities=new ArrayList<>();
-                appUser.getAppRoles().forEach(r->{
+                user.getRoles().forEach(r->{
                     authorities.add(new SimpleGrantedAuthority(r.getRoleName()));
                 });
-                return new User(appUser.getUsername(),appUser.getPassword(),authorities);
+                return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),authorities);
             }
         });
     }

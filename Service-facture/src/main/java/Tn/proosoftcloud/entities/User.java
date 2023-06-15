@@ -1,30 +1,33 @@
-package tn.proosoftcloud.sec.entities;
-
+package Tn.proosoftcloud.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
-@Entity
+import java.util.List;
+
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AppUser {
+@Entity
+@Table(name = "\"User\"")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id ;
+    private Long iduser ;
     private String username ;
     private String cin ;
     private String email ;
-    private String tel ;
+    private String codeClient ;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password ;
-    @ManyToMany(fetch = FetchType.EAGER)
-    private Collection<AppRole> appRoles=new ArrayList<>();
+    @OneToMany(mappedBy = "user")
+    private List<Facture> factures;
 
 }

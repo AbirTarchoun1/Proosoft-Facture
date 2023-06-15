@@ -1,9 +1,9 @@
 package tn.proosoftcloud.sec.service;
 
-import tn.proosoftcloud.sec.entities.AppRole;
-import tn.proosoftcloud.sec.entities.AppUser;
-import tn.proosoftcloud.sec.repo.AppRoleRepository;
-import tn.proosoftcloud.sec.repo.AppUserRepository;
+import tn.proosoftcloud.sec.entities.Role;
+import tn.proosoftcloud.sec.entities.User;
+import tn.proosoftcloud.sec.repo.IRoleRepository;
+import tn.proosoftcloud.sec.repo.IUserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,44 +12,44 @@ import java.util.List;
 @Service
 @Transactional
 public class AccountServiceImpl implements AccountService {
-    private AppUserRepository appUserRepository ;
-    private AppRoleRepository appRoleRepository ;
+    private IUserRepository iUserRepository;
+    private IRoleRepository iRoleRepository;
     private PasswordEncoder passwordEncoder ;
-    public AccountServiceImpl(AppUserRepository appUserRepository, AppRoleRepository appRoleRepository, PasswordEncoder passwordEncoder) {
-        this.appUserRepository = appUserRepository;
-        this.appRoleRepository = appRoleRepository;
+    public AccountServiceImpl(IUserRepository iUserRepository, IRoleRepository iRoleRepository, PasswordEncoder passwordEncoder) {
+        this.iUserRepository = iUserRepository;
+        this.iRoleRepository = iRoleRepository;
         this.passwordEncoder = passwordEncoder;
     }
 
     @Override
-    public AppUser addNewUser(AppUser appUser) {
-        String pw=appUser.getPassword();
-        appUser.setPassword(passwordEncoder.encode(pw));
-        return appUserRepository.save(appUser);
+    public User addNewUser(User user) {
+        String pw= user.getPassword();
+        user.setPassword(passwordEncoder.encode(pw));
+        return iUserRepository.save(user);
     }
 
     @Override
-    public AppRole addNewRole(AppRole appRole) {
+    public Role addNewRole(Role role) {
 
-        return appRoleRepository.save(appRole);
+        return iRoleRepository.save(role);
     }
 
     @Override
     public void addRoleToUser(String username, String roleName) {
-        AppUser appUser=appUserRepository.findByUsername(username);
-        AppRole appRole=appRoleRepository.findByRoleName(roleName);
-        appUser.getAppRoles().add(appRole);
+        User user = iUserRepository.findByUsername(username);
+        Role role = iRoleRepository.findByRoleName(roleName);
+        user.getRoles().add(role);
      }
 
     @Override
-    public AppUser loadUserByUsername(String username) {
+    public User loadUserByUsername(String username) {
 
-        return appUserRepository.findByUsername(username);
+        return iUserRepository.findByUsername(username);
     }
 
     @Override
-    public List<AppUser> listUsers() {
+    public List<User> listUsers() {
 
-        return appUserRepository.findAll();
+        return iUserRepository.findAll();
     }
 }

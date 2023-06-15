@@ -7,8 +7,8 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import tn.proosoftcloud.sec.JWTUtil;
-import tn.proosoftcloud.sec.entities.AppRole;
-import tn.proosoftcloud.sec.entities.AppUser;
+import tn.proosoftcloud.sec.entities.Role;
+import tn.proosoftcloud.sec.entities.User;
 import tn.proosoftcloud.sec.service.AccountService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,20 +30,20 @@ public class AccountController {
     }
 
     @GetMapping(path = "/users")
-    public List<AppUser> appUsers() {
+    public List<User> appUsers() {
         return accountService.listUsers();
 
     }
 
     @PostMapping(path = "/users")
-    public AppUser saveUser(@RequestBody AppUser appUser) {
-        return accountService.addNewUser(appUser);
+    public User saveUser(@RequestBody User user) {
+        return accountService.addNewUser(user);
 
     }
 
     @PostMapping(path = "/roles")
-    public AppRole saveRole(@RequestBody AppRole appRole) {
-        return accountService.addNewRole(appRole);
+    public Role saveRole(@RequestBody Role role) {
+        return accountService.addNewRole(role);
 
     }
 
@@ -65,14 +65,14 @@ public class AccountController {
                 JWTVerifier jwtVerifier = JWT.require(algorithm).build();
                 DecodedJWT decodedJWT = jwtVerifier.verify(jwt);
                 String username = decodedJWT.getSubject();
-                AppUser appUser = accountService.loadUserByUsername(username);
+                User user = accountService.loadUserByUsername(username);
                 // craete new acces token from refresh token
 
                 String jwtAccessToken = JWT.create()
-                        .withSubject(appUser.getUsername())
+                        .withSubject(user.getUsername())
                         .withExpiresAt(new Date(System.currentTimeMillis() + JWTUtil.EXPIRE_REFRESH_TOKEN))
                         .withIssuer(request.getRequestURL().toString())
-                        .withClaim("roles", appUser.getAppRoles().stream().map(r -> r.getRoleName()).collect(Collectors.toList()))
+                        .withClaim("roles", user.getRoles().stream().map(r -> r.getRoleName()).collect(Collectors.toList()))
                         .sign(algorithm);
                 //return refresh token and acces token in hash map object
                 Map<String, String> idToken = new HashMap<>();
@@ -92,7 +92,7 @@ public class AccountController {
 
         }
         @GetMapping(path="/profile")
-        public AppUser profile(Principal principal){
+        public User profile(Principal principal){
         return accountService.loadUserByUsername(principal.getName());
         }
 

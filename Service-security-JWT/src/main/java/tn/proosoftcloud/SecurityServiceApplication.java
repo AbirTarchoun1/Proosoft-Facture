@@ -1,7 +1,8 @@
 package tn.proosoftcloud;
 
-import tn.proosoftcloud.sec.entities.AppRole;
-import tn.proosoftcloud.sec.entities.AppUser;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import tn.proosoftcloud.sec.entities.Role;
+import tn.proosoftcloud.sec.entities.User;
 import tn.proosoftcloud.sec.service.AccountService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,7 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.ArrayList;
 @EnableDiscoveryClient
-
+/*@EntityScan("tn.proosoftcloud.sec.entities")*/
 @SpringBootApplication
 public class SecurityServiceApplication {
 
@@ -24,15 +25,15 @@ public class SecurityServiceApplication {
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
-    @Bean
+   /*@Bean
     CommandLineRunner start(AccountService accountService){
         return  args -> {
-            accountService.addNewRole(new AppRole(null,"Admin"));
+            accountService.addNewRole(new Role(null,"Admin"));
             //accountService.addNewRole(new AppRole(null,"Client"));
-            accountService.addNewRole(new AppRole(null,"User"));
+            accountService.addNewRole(new Role(null,"User"));
 
-            accountService.addNewUser( new AppUser(null,"admin","117896546","abir@tp-dev.net","24948559","tpdev*",new ArrayList<>()));
-            accountService.addNewUser( new AppUser(null,"user","1136987454","user@gmail.com","24948559","tpdev*",new ArrayList<>()));
+            accountService.addNewUser( new User("admin","117896546","abir@tp-dev.net","24948559","tpdev"));
+            accountService.addNewUser( new User("user","1136987454","user@gmail.com","24948559","tpdev*"));
 
 
             accountService.addRoleToUser("admin","Admin");
@@ -41,5 +42,5 @@ public class SecurityServiceApplication {
 
 
         };
-    }
+    }*/
 }

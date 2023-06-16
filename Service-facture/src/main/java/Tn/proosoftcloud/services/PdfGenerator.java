@@ -2,9 +2,11 @@ package Tn.proosoftcloud.services;
 
 import Tn.proosoftcloud.entities.Facture;
 import Tn.proosoftcloud.repository.IFactureRepository;
+import com.itextpdf.text.BaseColor;
 import com.lowagie.text.Font;
 import com.lowagie.text.Image;
 import com.lowagie.text.*;
+import com.lowagie.text.Rectangle;
 import com.lowagie.text.pdf.CMYKColor;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
@@ -14,124 +16,101 @@ import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
 import java.io.IOException;
 import java.util.List;
-
 public class PdfGenerator {
     @Autowired
     IFactureRepository FactureRepository;
 
+
+
     public void generateToClient(List<Facture> facture, HttpServletResponse response) throws DocumentException, IOException {
-
         // Creating the Object of Document
-
-      Document document = new Document(PageSize.A4);
+        Document document = new Document(PageSize.A4);
 
         // Getting instance of PdfWriter
+        PdfWriter writer = PdfWriter.getInstance(document, response.getOutputStream());
 
-        PdfWriter.getInstance(document, response.getOutputStream());
         // Opening the created document to change it
-
         document.open();
 
-        // Creating font
+        PdfPTable titleTable = new PdfPTable(2);
+        titleTable.setWidthPercentage(100f);
+        titleTable.setWidths(new int[]{1, 9});
 
-        // Setting font style and size
+// Adding the image cell
+        PdfPCell imageCell = new PdfPCell();
+        Image image = Image.getInstance("C:\\Users\\TPDEV1\\Desktop\\PDFFacture\\logo.png");
+        image.scaleToFit(100, 100);
+        imageCell.addElement(image);
+        imageCell.setBorder(Rectangle.NO_BORDER);
+        titleTable.addCell(imageCell);
 
-        Font fontTiltle = FontFactory.getFont(FontFactory.TIMES_ROMAN);
+// Adding the "Facture" title cell
+        PdfPCell titleCell = new PdfPCell(new Phrase("Facture", FontFactory.getFont(FontFactory.TIMES_ROMAN, 15, Color.BLUE)));
+        titleCell.setBorder(Rectangle.NO_BORDER);
+        titleCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+        titleCell.setVerticalAlignment(Element.ALIGN_MIDDLE);
+        titleTable.addCell(titleCell);
+        Paragraph lineBreak = new Paragraph(" ");
+        document.add(lineBreak);
+        Paragraph lineBreak2 = new Paragraph(" ");
+        document.add(lineBreak2);
 
-        fontTiltle.setSize(15);
-        fontTiltle.setColor(Color.DARK_GRAY);
-        // Creating paragraph
-        Paragraph paragraph1 = new Paragraph("Facture", fontTiltle);
-        // Aligning the paragraph in the document
+// Adding the title table to the document
+        document.add(titleTable);
 
-        paragraph1.setAlignment(Paragraph.ALIGN_CENTER);
+        // Adding the "Titre" outside the table
+        for (Facture facturess : facture) {
+            Paragraph titreParagraph = new Paragraph("Titre: " + facturess.getTitre(), FontFactory.getFont(FontFactory.TIMES_ROMAN, 12));
+            titreParagraph.setSpacingBefore(10);
+            document.add(titreParagraph);
+            Paragraph titreParagraph2 = new Paragraph("Reference: " + facturess.getReference(), FontFactory.getFont(FontFactory.TIMES_ROMAN, 12));
+            titreParagraph.setSpacingBefore(10);
+            document.add(titreParagraph2);
+            Paragraph titreParagraph3 = new Paragraph("Date: " + facturess.getDateFacture(), FontFactory.getFont(FontFactory.TIMES_ROMAN, 12));
+            titreParagraph.setSpacingBefore(10);
+            document.add(titreParagraph3);
 
-        // Adding the created paragraph in the document
-
-        document.add(paragraph1);
-
-        Image image = Image.getInstance("https://proosoftcloud.com/web/image/website/1/favicon/");
-        image.scaleToFit(50, 50);
-        image.setBottom(12);
-
-
-        document.add(image);
-
-        // Creating a table of the 4 columns
-
+            // Add an empty paragraph for line break
+            Paragraph lineBreakk = new Paragraph(" ");
+            document.add(lineBreakk);
+        }
+// Creating a table of 6 columns
         PdfPTable table = new PdfPTable(4);
-
-        // Setting width of the table, its columns and spacing
-
         table.setWidthPercentage(100f);
-
-        table.setWidths(new int[] {6,6,6,6});
-
+        table.setWidths(new int[]{2, 2, 2,2});
         table.setSpacingBefore(8);
 
-        // Create Table Cells for the table header
-
+// Create table header cells
         PdfPCell cell = new PdfPCell();
-
-        // Setting the background color and padding of the table cell
-
-        cell.setBackgroundColor(CMYKColor.red);
-
         cell.setPadding(4);
-
-        // Creating font
-
-        // Setting font style and size
-
         Font font = FontFactory.getFont(FontFactory.TIMES_ROMAN);
+        font.setColor(Color.WHITE);
 
-        font.setColor(CMYKColor.WHITE);
-
-        // Adding headings in the created table cell or  header
-
-        // Adding Cell to table
-
-        cell.setPhrase(new Phrase("Titre", font));
-
-        table.addCell(cell);
-
-        cell.setPhrase(new Phrase("Reference", font));
-
-        table.addCell(cell);
+// Set cell background color to blue (RGB: 0, 0, 255)
+        cell.setBackgroundColor(new Color(0, 0, 255));
 
         cell.setPhrase(new Phrase("Client", font));
-
         table.addCell(cell);
-
-        cell.setPhrase(new Phrase("DateFacture", font));
         cell.setPhrase(new Phrase("Total_HT", font));
+        table.addCell(cell);
+        cell.setPhrase(new Phrase("TVA", font));
+        table.addCell(cell);
         cell.setPhrase(new Phrase("Total_TTC", font));
-
         table.addCell(cell);
 
-        // Iterating the list of students
-
-        for (Facture facture1: facture) {
-            table.addCell(facture1.getTitre());
-            table.addCell(facture1.getReference());
+// Add data rows
+        for (Facture facture1 : facture) {
             table.addCell(facture1.getClient());
-            table.addCell(facture1.getDateFacture());
             table.addCell(facture1.getTotal_HT());
+            table.addCell(facture1.getTva());
             table.addCell(facture1.getTotal_TTC());
-
-
-
         }
 
-        // Adding the created table to the document
-
+// Add the table to the document
         document.add(table);
 
-        // Closing the document
-
+// Close the document
         document.close();
-
+        writer.close();
     }
-
-
 }

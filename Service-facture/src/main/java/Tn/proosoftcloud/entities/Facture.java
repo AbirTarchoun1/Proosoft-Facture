@@ -1,7 +1,7 @@
 package Tn.proosoftcloud.entities;
-
-import jakarta.persistence.*;
 import lombok.*;
+
+import javax.persistence.*;
 
 @ToString
 @Setter

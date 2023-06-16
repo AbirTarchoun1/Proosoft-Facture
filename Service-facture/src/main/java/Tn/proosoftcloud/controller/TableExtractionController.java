@@ -42,7 +42,7 @@ public class TableExtractionController {
     @Autowired
     IFacture facture;
 
-    @PostMapping(value = "/extract-table/{idfacture}")
+    @PostMapping(value = "/extract-table")
     public ResponseEntity<Map<Integer, String[]>> extractTable(@RequestParam("image") MultipartFile imageFile,@PathVariable("idfacture") int idfacture) throws IOException {
 
         File tempImageFile = null;

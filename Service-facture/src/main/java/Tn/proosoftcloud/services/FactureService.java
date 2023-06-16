@@ -185,7 +185,9 @@ public class FactureService implements IFacture {
             factureRepository.save(facture);
             return map;
         }
-
+    public List<Facture> getFacturesByUserId(int userId) {
+        return factureRepository.findByUserId(userId);
+    }
 
     public Map<String, String> verifyData(String extractedText) {
         String[] lines = extractedText.split("\n");
